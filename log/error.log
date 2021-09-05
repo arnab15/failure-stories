@@ -1,0 +1,559 @@
+2021-08-22 09:04:19 [31merror[39m: Error: Not working
+    at exports.nodeApp (C:\WorkDir\ideas\failure\backend\App\app.js:33:15)
+    at Object.<anonymous> (C:\WorkDir\ideas\failure\backend\index.js:3:1)
+    at Module._compile (internal/modules/cjs/loader.js:1015:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)
+    at Module.load (internal/modules/cjs/loader.js:879:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:724:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+2021-08-22 09:12:15 [31merror[39m: redis client error
+2021-08-22 09:12:15 [31merror[39m: redis client disconnected
+2021-08-22 09:12:15 [31merror[39m: redis client error
+2021-08-22 09:12:16 [31merror[39m: redis client error
+2021-08-22 09:12:16 [31merror[39m: redis client error
+2021-08-22 09:12:17 [31merror[39m: redis client error
+2021-08-22 09:12:19 [31merror[39m: redis client error
+2021-08-22 09:12:22 [31merror[39m: redis client error
+2021-08-22 09:12:27 [31merror[39m: redis client error
+2021-08-22 09:12:35 [31merror[39m: redis client error
+2021-08-22 09:12:49 [31merror[39m: redis client error
+2021-08-22 10:18:03 [31merror[39m: ReferenceError: error is not defined
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:16:18
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:111:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:27:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:18:46 [31merror[39m: Error: payload is required
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:111:20)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:27:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:18:46 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:17:24
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:111:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:27:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:19:20 [31merror[39m: Error: "audience" must be a string or array
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:52:15
+    at Array.forEach (<anonymous>)
+    at validate (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:43:6)
+    at validateOptions (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:58:10)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:141:5)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:27:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:19:20 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:17:24
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:144:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:27:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:20:34 [31merror[39m: Error: "audience" must be a string or array
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:52:15
+    at Array.forEach (<anonymous>)
+    at validate (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:43:6)
+    at validateOptions (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:58:10)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:141:5)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:28:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:20:34 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:17:24
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:144:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:28:23)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:31:09 [31merror[39m: Error: secretOrPrivateKey must have a value
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:107:20)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:33:7
+    at new Promise (<anonymous>)
+    at exports.signRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:26:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:31:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:31:09 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:36:24
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:107:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:33:7
+    at new Promise (<anonymous>)
+    at exports.signRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:26:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:31:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:31:09 [31merror[39m: Error: node_redis: The SET command contains a invalid argument type of "undefined".
+Only strings, dates and buffers are accepted. Please update your code to use valid argument types.
+    at RedisClient.internal_send_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:850:37)
+    at RedisClient.set (C:\WorkDir\ideas\failure\backend\node_modules\redis\lib\commands.js:46:25)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at RedisClient.set (internal/util.js:296:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:38:4
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:107:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:33:7
+    at new Promise (<anonymous>)
+    at exports.signRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:26:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:31:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:32:51 [31merror[39m: Error: secretOrPrivateKey must have a value
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:107:20)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:33:7
+    at new Promise (<anonymous>)
+    at exports.signRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:26:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:31:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:32:51 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:36:24
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:107:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:33:7
+    at new Promise (<anonymous>)
+    at exports.signRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:26:9)
+    at exports.signUpController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:31:30)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:53:40 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:53:45 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:56:01 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:56:03 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 10:56:48 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:55:39
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:133:14
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:47:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+2021-08-22 10:57:55 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:55:39
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:133:14
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:47:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+2021-08-22 11:59:09 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:55:39
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:75:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:77:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+2021-08-22 11:59:13 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:55:39
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:75:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:77:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+2021-08-22 11:59:14 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:55:39
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:75:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:77:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+2021-08-22 11:59:15 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:55:39
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:75:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:77:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+2021-08-22 12:02:38 [31merror[39m: ReferenceError: delDataAsync is not defined
+    at exports.logoutController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:96:3)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:02:43 [31merror[39m: ReferenceError: delDataAsync is not defined
+    at exports.logoutController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:96:3)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:02:47 [31merror[39m: ReferenceError: delDataAsync is not defined
+    at exports.logoutController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:96:3)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:03:32 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:03:59 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:04:00 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:04:38 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:05:01 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:05:14 [31merror[39m: UnauthorizedError: Unauthorized
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:61:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:13:48 [31merror[39m: Error: "audience" must be a string or array
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:52:15
+    at Array.forEach (<anonymous>)
+    at validate (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:43:6)
+    at validateOptions (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:58:10)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:141:5)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.loginController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:60:29)
+2021-08-22 12:13:48 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:17:24
+    at failure (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:101:14)
+    at Object.module.exports [as sign] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:144:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:14:7
+    at new Promise (<anonymous>)
+    at exports.signAccessToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:7:9)
+    at exports.loginController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:60:29)
+2021-08-22 12:38:12 [31merror[39m: ReferenceError: options is not defined
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:100:42)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-22 12:58:21 [31merror[39m: TokenExpiredError: jwt expired
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.isAuthenticated (C:\WorkDir\ideas\failure\backend\App\middlewares\isAuthenticated.js:11:6)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:284:7
+2021-08-22 13:18:17 [31merror[39m: TypeError: Cannot read property 'path' of undefined
+    at exports.addImage (C:\WorkDir\ideas\failure\backend\App\controllers\imageUpload\index.js:6:98)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at multerMiddleware (C:\WorkDir\ideas\failure\backend\node_modules\multer\lib\make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:284:7
+2021-08-22 13:20:09 [31merror[39m: TypeError: Cannot read property 'path' of undefined
+    at exports.addImage (C:\WorkDir\ideas\failure\backend\App\controllers\imageUpload\index.js:7:98)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at multerMiddleware (C:\WorkDir\ideas\failure\backend\node_modules\multer\lib\make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:284:7
+2021-08-23 19:50:07 [31merror[39m: redis client error
+2021-08-23 19:50:07 [31merror[39m: redis client disconnected
+2021-08-23 19:50:07 [31merror[39m: redis client error
+2021-08-23 19:50:07 [31merror[39m: redis client error
+2021-08-23 19:50:08 [31merror[39m: redis client error
+2021-08-23 19:50:09 [31merror[39m: redis client error
+2021-08-23 19:50:10 [31merror[39m: redis client error
+2021-08-23 19:50:13 [31merror[39m: redis client error
+2021-08-23 19:50:18 [31merror[39m: redis client error
+2021-08-23 19:50:26 [31merror[39m: redis client error
+2021-08-23 19:50:40 [31merror[39m: redis client error
+2021-08-23 19:51:04 [31merror[39m: redis client error
+2021-08-24 06:29:53 [31merror[39m: redis client error
+2021-08-24 06:29:53 [31merror[39m: redis client disconnected
+2021-08-24 06:29:53 [31merror[39m: redis client error
+2021-08-24 06:29:54 [31merror[39m: redis client error
+2021-08-24 06:29:54 [31merror[39m: redis client error
+2021-08-24 06:29:55 [31merror[39m: redis client error
+2021-08-24 06:29:57 [31merror[39m: redis client error
+2021-08-24 06:30:00 [31merror[39m: redis client error
+2021-08-24 06:30:05 [31merror[39m: redis client error
+2021-08-24 06:30:13 [31merror[39m: redis client error
+2021-08-24 06:30:27 [31merror[39m: redis client error
+2021-08-24 07:14:55 [31merror[39m: ReferenceError: storyId is not defined
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:58:38)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:15:59 [31merror[39m: ValidationError: Story validation failed: story: Cast to string failed for value "{
+  time: 1629769559210,
+  blocks: [ { id: 'IGD1IWU2QA', type: 'paragraph', data: [Object] } ],
+  version: '2.22.2'
+}" (type Object) at path "story"
+    at model.Document.invalidate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\document.js:2760:32)
+    at model.$set (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\document.js:1327:12)
+    at model.set [as story] (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\document\compile.js:179:19)
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:60:14)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:36:09 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:42:24 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:42:24 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:43:21 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:43:42 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:45:39 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:46:26 [31merror[39m: redis client disconnected
+2021-08-24 07:46:59 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:47:20 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:47:34 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:47:58 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:48:21 [31merror[39m: CastError: Cast to ObjectId failed for value "author" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-24 07:50:20 [31merror[39m: TypeError: Cannot read property 'aud' of undefined
+    at exports.getcurrentUserStories (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:75:27)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:317:13)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:635:15
+2021-08-25 19:49:50 [31merror[39m: redis client error
+2021-08-25 19:49:50 [31merror[39m: redis client disconnected
+2021-08-25 19:49:51 [31merror[39m: redis client error
+2021-08-25 19:49:51 [31merror[39m: redis client error
+2021-08-25 19:49:52 [31merror[39m: redis client error
+2021-08-25 19:49:53 [31merror[39m: redis client error
+2021-08-25 19:49:54 [31merror[39m: redis client error
+2021-08-25 19:49:57 [31merror[39m: redis client error
+2021-08-25 19:50:02 [31merror[39m: redis client error
+2021-08-25 19:50:10 [31merror[39m: redis client error
+2021-08-25 19:50:24 [31merror[39m: redis client error
+2021-08-26 23:25:14 [31merror[39m: TypeError: Cannot read property 'aud' of undefined
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:53:27)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-26 23:25:54 [31merror[39m: TypeError: Cannot read property 'aud' of undefined
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:53:27)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-26 23:25:55 [31merror[39m: TypeError: Cannot read property 'aud' of undefined
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:53:27)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-26 23:27:55 [31merror[39m: TypeError: Cannot read property 'aud' of undefined
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:82:27)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-26 23:27:56 [31merror[39m: TypeError: Cannot read property 'aud' of undefined
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:82:27)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-26 23:28:29 [31merror[39m: TypeError: Cannot read property 'aud' of undefined
+    at exports.updateStory (C:\WorkDir\ideas\failure\backend\App\controllers\stories\storiesController.js:82:27)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:13:17 [31merror[39m: JsonWebTokenError: invalid signature
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:133:19
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:152:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at param (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:365:14)
+    at param (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+2021-08-30 20:29:23 [31merror[39m: TokenExpiredError: jwt expired
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:152:24)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:30:34 [31merror[39m: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:30:51 [31merror[39m: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:32:56 [31merror[39m: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:33:46 [31merror[39m: TokenExpiredError: jwt expired
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:152:24)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:34:17 [31merror[39m: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "User"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:49:23 [31merror[39m: TokenExpiredError: jwt expired
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:155:24)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 20:56:29 [31merror[39m: JsonWebTokenError: invalid signature
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:133:19
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:155:24)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 21:01:55 [31merror[39m: JsonWebTokenError: invalid signature
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:133:19
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:155:24)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-30 21:38:56 [31merror[39m: CastError: Cast to ObjectId failed for value "15" (type string) at path "_id" for model "User"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-08-31 06:34:14 [31merror[39m: redis client error
+2021-08-31 06:34:14 [31merror[39m: redis client disconnected
+2021-08-31 06:34:14 [31merror[39m: redis client error
+2021-08-31 06:34:14 [31merror[39m: redis client error
+2021-08-31 06:34:15 [31merror[39m: redis client error
+2021-08-31 06:34:16 [31merror[39m: redis client error
+2021-08-31 06:34:18 [31merror[39m: redis client error
+2021-08-31 06:34:20 [31merror[39m: redis client error
+2021-08-31 06:34:25 [31merror[39m: redis client error
+2021-08-31 06:34:33 [31merror[39m: redis client error
+2021-09-04 22:43:41 [31merror[39m: redis client error
+2021-09-04 22:43:41 [31merror[39m: redis client disconnected
+2021-09-04 22:43:42 [31merror[39m: redis client error
+2021-09-04 22:43:42 [31merror[39m: redis client error
+2021-09-04 22:43:42 [31merror[39m: redis client error
+2021-09-04 22:43:43 [31merror[39m: redis client error
+2021-09-04 22:43:45 [31merror[39m: redis client error
+2021-09-04 22:43:48 [31merror[39m: redis client error
+2021-09-04 22:43:53 [31merror[39m: redis client error
+2021-09-04 22:44:01 [31merror[39m: redis client error
