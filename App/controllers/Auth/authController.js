@@ -15,6 +15,8 @@ const { customHttpError } = require("../../helpers/customError");
 let cookieConfig = {
 	maxAge: 1000 * 60 * 15, // would expire after 15 minutes
 	httpOnly: true,
+	secure: false,
+	sameSite: "none",
 };
 
 exports.signUpController = async (req, res, next) => {
