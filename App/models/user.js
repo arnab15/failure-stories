@@ -28,6 +28,19 @@ const userSchema = new Schema(
 			unique: true,
 			trim: true,
 		},
+		profilePic: {
+			type: String,
+			trim: true,
+		},
+		googleId: {
+			type: String,
+			trim: true,
+			unique: true,
+		},
+		bio: {
+			type: String,
+			trim: true,
+		},
 	},
 	{
 		timestamps: true,

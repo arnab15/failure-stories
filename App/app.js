@@ -6,6 +6,7 @@ if (!nodeEnv || nodeEnv === "development") {
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const morgan = require("morgan");
 const Joi = require("joi");
 Joi.objectId = require("joi-objectid")(Joi);
 const { logger } = require("./logger");
@@ -15,6 +16,7 @@ require("./connectors/redisConnector");
 const app = express();
 const PORT = process.env.PORT || 5000;
 exports.nodeApp = () => {
+	app.use(morgan("common"));
 	app.use(
 		cors({
 			origin: ["http://localhost:3000", "http://localhost:3001"],

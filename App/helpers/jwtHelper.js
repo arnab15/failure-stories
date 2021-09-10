@@ -7,7 +7,7 @@ exports.signAccessToken = ({ payload = {}, userId }) => {
 	return new Promise((resolve, reject) => {
 		const secret = process.env.ACCESS_TOKEN_SECRET;
 		const options = {
-			expiresIn: "45min",
+			expiresIn: "30sec",
 			issuer: "arnab.sahoo",
 			audience: userId,
 		};
@@ -56,7 +56,7 @@ exports.verifyRefreshToken = (refreshToken) => {
 			const userId = payload.aud;
 			getDataAsync(userId)
 				.then((result) => {
-					if (refreshToken === result) return resolve(userId);
+					if (refreshToken === result) return resolve(payload);
 					reject(createError.Unauthorized());
 				})
 				.catch((err) => {

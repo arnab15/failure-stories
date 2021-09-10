@@ -3,7 +3,7 @@ const { uniqueNamesGenerator, NumberDictionary, adjectives } = require("unique-n
 exports.generateUsername = (name) => {
 	const numberDictionary = NumberDictionary.generate({ min: 100, max: 10000 });
 	const config = {
-		dictionaries: [["arnab"], adjectives, numberDictionary],
+		dictionaries: [[name.split(" ")[0]], adjectives, numberDictionary],
 		separator: "",
 	};
 

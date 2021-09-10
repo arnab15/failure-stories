@@ -9,11 +9,13 @@ const {
 	verifyForgotPasswordCredentials,
 	resetPassword,
 	confirmAccountCreation,
+	googleLogin,
 } = require("../../controllers/Auth/authController");
 const { isAuthenticated } = require("../../middlewares/isAuthenticated");
 
 router.post("/signup", signUpController);
 router.post("/login", loginController);
+router.post("/login-with-google", googleLogin);
 router.delete("/logout", logoutController);
 router.post("/refresh-token", refreshTokenController);
 router.post("/forgot-password", forgotPassword);

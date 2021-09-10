@@ -1,5 +1,7 @@
 const createError = require("http-errors");
 const jwt = require("jsonwebtoken");
+const { OAuth2Client } = require("google-auth-library");
+
 const { delDataAsync } = require("../../connectors/redisConnector");
 const { hashPasword, comparePasword } = require("../../helpers/hashPassword");
 const { signAccessToken, signRefreshToken, verifyRefreshToken } = require("../../helpers/jwtHelper");
@@ -8,6 +10,7 @@ const { User } = require("../../models/user");
 const { sendAccountConfirmationMail, sendPasswordResetMail } = require("../../services/emailService");
 const { generateUsername } = require("../../utils/generateUsername");
 const { validateSignup, validateLogin } = require("../../validators/Auth/authValidator");
+const { customHttpError } = require("../../helpers/customError");
 
 exports.signUpController = async (req, res, next) => {
 	try {
@@ -32,14 +35,31 @@ exports.signUpController = async (req, res, next) => {
 			email,
 			password: hashedPassword,
 			username,
+			profilePic: `https://avatars.dicebear.com/api/avataaars/${name}.svg`,
 		});
 
 		const savedUser = await user.save();
 		await sendAccountConfirmationMail(savedUser.email, savedUser.id);
+
 		const accessToken = await signAccessToken({
 			userId: savedUser.id,
+			payload: {
+				userId: savedUser.id,
+				name: savedUser.name,
+				username: savedUser.username,
+				profilePic: savedUser.profilePic,
+			},
 		});
-		const refreshToken = await signRefreshToken({ userId: savedUser.id });
+		const refreshToken = await signRefreshToken({
+			userId: savedUser.id,
+			userId: savedUser.id,
+			payload: {
+				userId: savedUser.id,
+				name: savedUser.name,
+				username: savedUser.username,
+				profilePic: savedUser.profilePic,
+			},
+		});
 
 		let options = {
 			maxAge: 1000 * 60 * 15, // would expire after 15 minutes
@@ -75,8 +95,23 @@ exports.loginController = async (req, res, next) => {
 
 		const accessToken = await signAccessToken({
 			userId: userExist.id,
+			payload: {
+				userId: userExist.id,
+				name: userExist.name,
+				username: userExist.username,
+				profilePic: userExist.profilePic,
+			},
 		});
-		const refreshToken = await signRefreshToken({ userId: userExist.id });
+		const refreshToken = await signRefreshToken({
+			userId: userExist.id,
+			userId: userExist.id,
+			payload: {
+				userId: userExist.id,
+				name: userExist.name,
+				username: userExist.username,
+				profilePic: userExist.profilePic,
+			},
+		});
 
 		let options = {
 			maxAge: 1000 * 60 * 60 * 24, // would expire after 15 minutes
@@ -91,6 +126,7 @@ exports.loginController = async (req, res, next) => {
 		// });
 	} catch (error) {
 		logger.error(error);
+		res.status(500);
 		next(createError.InternalServerError());
 	}
 };
@@ -99,10 +135,28 @@ exports.refreshTokenController = async (req, res, next) => {
 	try {
 		const refreshToken = req.cookies._refToken;
 		if (!refreshToken) return res.status(400).send(createError.BadRequest());
-		const userId = await verifyRefreshToken(refreshToken);
-		if (userId) {
-			const accessToken = await signAccessToken({ userId });
-			const refToken = await signRefreshToken({ userId });
+		const payload = await verifyRefreshToken(refreshToken);
+		console.log("payload", payload);
+		const { userId, name, username, profilePic } = payload;
+		if (payload.userId) {
+			const accessToken = await signAccessToken({
+				userId: payload.userId,
+				payload: {
+					userId,
+					name,
+					username,
+					profilePic,
+				},
+			});
+			const refToken = await signRefreshToken({
+				userId: payload.userId,
+				payload: {
+					userId,
+					name,
+					username,
+					profilePic,
+				},
+			});
 			let options = {
 				maxAge: 1000 * 60 * 15, // would expire after 15 minutes
 				httpOnly: true,
@@ -113,6 +167,7 @@ exports.refreshTokenController = async (req, res, next) => {
 	} catch (error) {
 		if (error.message === "Unauthorized") return res.status(401).send(createError.Unauthorized("Invalid Token"));
 		logger.error(error);
+		res.status(500);
 		next(createError.InternalServerError());
 	}
 };
@@ -121,9 +176,9 @@ exports.logoutController = async (req, res, next) => {
 	try {
 		const refreshToken = req.cookies._refToken;
 		if (!refreshToken) return res.status(400).send(createError.BadRequest("No token found"));
-		const userId = await verifyRefreshToken(refreshToken);
-		if (!userId) return res.status(401).send(createError.BadRequest());
-		await delDataAsync(userId);
+		const payload = await verifyRefreshToken(refreshToken);
+		if (!payload.userId) return res.status(400).send(createError.BadRequest());
+		await delDataAsync(payload.userId);
 		res.clearCookie("_refToken");
 		return res.sendStatus(204);
 	} catch (error) {
@@ -230,5 +285,104 @@ exports.confirmAccountCreation = async (req, res, next) => {
 		logger.error(error);
 		res.status(500);
 		next(createError.InternalServerError());
+	}
+};
+
+exports.googleLogin = async (req, res, next) => {
+	const bearerHeader = req.headers["x-auth-google"];
+	if (bearerHeader) {
+		const bearer = bearerHeader.split(" ");
+		const bearerToken = bearer[1];
+		const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRETE);
+		try {
+			const { payload } = await googleClient.verifyIdToken({
+				idToken: bearerToken,
+				audience: process.env.GOOGLE_CLIENT_ID,
+			});
+			const { sub: googleUserId, email, email_verified, picture, name } = payload;
+			if (email_verified) {
+				try {
+					let user = await User.findOne({ email });
+					if (!user) {
+						const hashedPassword = await hashPasword(bearerToken);
+						const username = generateUsername(name);
+
+						const user = new User({
+							name,
+							email,
+							password: hashedPassword,
+							username,
+							accountVerified: email_verified,
+							googleId: googleUserId,
+							profilePic: picture,
+						});
+						const savedUser = await user.save();
+						const accessToken = await signAccessToken({
+							userId: savedUser.id,
+							payload: {
+								userId: savedUser.id,
+								name: savedUser.name,
+								username: savedUser.username,
+								profilePic: savedUser.profilePic,
+							},
+						});
+						const refreshToken = await signRefreshToken({
+							userId: savedUser.id,
+							userId: savedUser.id,
+							payload: {
+								userId: savedUser.id,
+								name: savedUser.name,
+								username: savedUser.username,
+								profilePic: savedUser.profilePic,
+							},
+						});
+
+						let options = {
+							maxAge: 1000 * 60 * 60 * 24, // would expire after 15 minutes
+							httpOnly: true,
+						};
+						res.cookie("_refToken", refreshToken, options);
+						return res.status(201).send({ accessToken: accessToken });
+					} else {
+						const accessToken = await signAccessToken({
+							userId: user.id,
+							payload: {
+								userId: user.id,
+								name: user.name,
+								username: user.username,
+								profilePic: user.profilePic,
+							},
+						});
+						const refreshToken = await signRefreshToken({
+							userId: user.id,
+							payload: {
+								userId: user.id,
+								name: user.name,
+								username: user.username,
+								profilePic: user.profilePic,
+							},
+						});
+
+						let options = {
+							maxAge: 1000 * 60 * 60 * 24, // would expire after 15 minutes
+							httpOnly: true,
+						};
+
+						res.cookie("_refToken", refreshToken, options);
+						return res.status(200).send({ accessToken: accessToken });
+					}
+				} catch (error) {
+					logger.error(error);
+					return customHttpError(res, next, 500, "Internal Server error");
+				}
+			} else {
+				return customHttpError(res, next, 403, "Please verify your google account");
+			}
+		} catch (error) {
+			logger.error(error);
+			return customHttpError(res, next, 403, "Something Went wrong");
+		}
+	} else {
+		return customHttpError(res, next, 403, "Invalid Token Details");
 	}
 };
