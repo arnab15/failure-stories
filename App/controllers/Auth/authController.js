@@ -12,6 +12,13 @@ const { generateUsername } = require("../../utils/generateUsername");
 const { validateSignup, validateLogin } = require("../../validators/Auth/authValidator");
 const { customHttpError } = require("../../helpers/customError");
 
+let cookieConfig = {
+	maxAge: 1000 * 60 * 15, // would expire after 15 minutes
+	httpOnly: true,
+	sameSite: "none",
+	secure: process.env.NODE_ENV !== "production" ? false : true,
+};
+
 exports.signUpController = async (req, res, next) => {
 	try {
 		await validateSignup(req.body);
@@ -61,11 +68,7 @@ exports.signUpController = async (req, res, next) => {
 			},
 		});
 
-		let options = {
-			maxAge: 1000 * 60 * 15, // would expire after 15 minutes
-			httpOnly: true,
-		};
-		res.cookie("_refToken", refreshToken, options);
+		res.cookie("_refToken", refreshToken, cookieConfig);
 		return res.status(201).send({ accessToken: accessToken });
 		// res.send({
 		// 	accessToken,
@@ -112,12 +115,7 @@ exports.loginController = async (req, res, next) => {
 				profilePic: userExist.profilePic,
 			},
 		});
-
-		let options = {
-			maxAge: 1000 * 60 * 60 * 24, // would expire after 15 minutes
-			httpOnly: true,
-		};
-		res.cookie("_refToken", refreshToken, options);
+		res.cookie("_refToken", refreshToken, cookieConfig);
 		return res.send({ accessToken: accessToken });
 
 		// res.send({
@@ -157,11 +155,7 @@ exports.refreshTokenController = async (req, res, next) => {
 					profilePic,
 				},
 			});
-			let options = {
-				maxAge: 1000 * 60 * 15, // would expire after 15 minutes
-				httpOnly: true,
-			};
-			res.cookie("_refToken", refToken, options);
+			res.cookie("_refToken", refToken, cookieConfig);
 			return res.send({ accessToken: accessToken });
 		}
 	} catch (error) {
@@ -337,11 +331,7 @@ exports.googleLogin = async (req, res, next) => {
 							},
 						});
 
-						let options = {
-							maxAge: 1000 * 60 * 60 * 24, // would expire after 15 minutes
-							httpOnly: true,
-						};
-						res.cookie("_refToken", refreshToken, options);
+						res.cookie("_refToken", refreshToken, cookieConfig);
 						return res.status(201).send({ accessToken: accessToken });
 					} else {
 						const accessToken = await signAccessToken({
@@ -363,12 +353,7 @@ exports.googleLogin = async (req, res, next) => {
 							},
 						});
 
-						let options = {
-							maxAge: 1000 * 60 * 60 * 24, // would expire after 15 minutes
-							httpOnly: true,
-						};
-
-						res.cookie("_refToken", refreshToken, options);
+						res.cookie("_refToken", refreshToken, cookieConfig);
 						return res.status(200).send({ accessToken: accessToken });
 					}
 				} catch (error) {
