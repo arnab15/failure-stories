@@ -15,7 +15,7 @@ const { customHttpError } = require("../../helpers/customError");
 let cookieConfig = {
 	maxAge: 1000 * 60 * 15, // would expire after 15 minutes
 	httpOnly: true,
-	secure: false,
+	secure: process.env.NODE_ENV !== "production" ? false : true,
 	sameSite: "none",
 };
 
