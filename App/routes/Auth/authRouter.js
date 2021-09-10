@@ -8,6 +8,7 @@ const {
 	forgotPassword,
 	verifyForgotPasswordCredentials,
 	resetPassword,
+	confirmAccountCreation,
 } = require("../../controllers/Auth/authController");
 const { isAuthenticated } = require("../../middlewares/isAuthenticated");
 
@@ -18,5 +19,6 @@ router.post("/refresh-token", refreshTokenController);
 router.post("/forgot-password", forgotPassword);
 router.post("/forgot-password/:id/:token", verifyForgotPasswordCredentials);
 router.post("/reset-password/:id/:token", resetPassword);
+router.post("/confirm-account/:confirmToken", confirmAccountCreation);
 
 module.exports = router;

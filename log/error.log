@@ -557,3 +557,224 @@ Only strings, dates and buffers are accepted. Please update your code to use val
 2021-09-04 22:43:48 [31merror[39m: redis client error
 2021-09-04 22:43:53 [31merror[39m: redis client error
 2021-09-04 22:44:01 [31merror[39m: redis client error
+2021-09-05 14:57:33 [31merror[39m: TypeError: Cannot read property 'push' of undefined
+    at exports.createReply (C:\WorkDir\ideas\failure\backend\App\controllers\comments\commentController.js:91:17)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-05 14:58:04 [31merror[39m: TypeError: Cannot read property 'push' of undefined
+    at exports.createReply (C:\WorkDir\ideas\failure\backend\App\controllers\comments\commentController.js:91:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-05 14:58:06 [31merror[39m: TypeError: Cannot read property 'push' of undefined
+    at exports.createReply (C:\WorkDir\ideas\failure\backend\App\controllers\comments\commentController.js:91:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-05 16:13:46 [31merror[39m: MongooseError: Cannot populate with `sort` on path replies.repliedBy because it is a subproperty of a document array
+    at getModelsMapForPopulate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:62:14)
+    at populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4604:21)
+    at _populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4575:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4552:5
+    at promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\index.js:1149:10)
+    at Function.Model.populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4550:23)
+    at cb (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:2047:17)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at handleCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:109:55)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:850:66
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:935:9
+    at Cursor._endSession (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\core\cursor.js:404:7)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:933:12
+    at maybePromise (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:692:3)
+2021-09-05 16:13:49 [31merror[39m: MongooseError: Cannot populate with `sort` on path replies.repliedBy because it is a subproperty of a document array
+    at getModelsMapForPopulate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:62:14)
+    at populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4604:21)
+    at _populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4575:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4552:5
+    at promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\index.js:1149:10)
+    at Function.Model.populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4550:23)
+    at cb (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:2047:17)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at handleCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:109:55)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:850:66
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:935:9
+    at Cursor._endSession (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\core\cursor.js:404:7)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:933:12
+    at maybePromise (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:692:3)
+2021-09-05 16:15:48 [31merror[39m: MongooseError: Cannot populate with `sort` on path replies.repliedBy because it is a subproperty of a document array
+    at getModelsMapForPopulate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:62:14)
+    at populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4604:21)
+    at _populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4575:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4552:5
+    at promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\index.js:1149:10)
+    at Function.Model.populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4550:23)
+    at cb (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:2047:17)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at handleCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:109:55)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:850:66
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:935:9
+    at Cursor._endSession (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\core\cursor.js:404:7)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:933:12
+    at maybePromise (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:692:3)
+2021-09-05 16:18:19 [31merror[39m: MongooseError: Cannot populate with `sort` on path replies.repliedBy because it is a subproperty of a document array
+    at getModelsMapForPopulate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\populate\getModelsMapForPopulate.js:62:14)
+    at populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4604:21)
+    at _populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4575:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4552:5
+    at promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\helpers\promiseOrCallback.js:10:12)
+    at Mongoose._promiseOrCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\index.js:1149:10)
+    at Function.Model.populate (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\model.js:4550:23)
+    at cb (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:2047:17)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at handleCallback (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:109:55)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:850:66
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:704:5
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:935:9
+    at Cursor._endSession (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\core\cursor.js:404:7)
+    at C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\cursor.js:933:12
+    at maybePromise (C:\WorkDir\ideas\failure\backend\node_modules\mongodb\lib\utils.js:692:3)
+2021-09-05 16:31:53 [31merror[39m: Error: Invalid sort() argument, must be array of arrays
+    at model.Query.Query.sort (C:\WorkDir\ideas\failure\backend\node_modules\mquery\lib\mquery.js:1255:15)
+    at model.Query.Query.sort (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:2685:26)
+    at exports.getCommentsByStoryId (C:\WorkDir\ideas\failure\backend\App\controllers\comments\commentController.js:50:5)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-05 21:22:54 [31merror[39m: CastError: Cast to ObjectId failed for value "new" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-05 21:23:01 [31merror[39m: CastError: Cast to ObjectId failed for value "new" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-05 21:23:06 [31merror[39m: CastError: Cast to ObjectId failed for value "new" (type string) at path "_id" for model "Story"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-06 00:55:42 [31merror[39m: CastError: Cast to ObjectId failed for value "confirm-account" (type string) at path "_id" for model "User"
+    at model.Query.exec (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4498:21)
+    at model.Query.Query.then (C:\WorkDir\ideas\failure\backend\node_modules\mongoose\lib\query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-06 09:31:53 [31merror[39m: JsonWebTokenError: invalid signature
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:133:19
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:158:24)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-06 09:32:04 [31merror[39m: JsonWebTokenError: invalid signature
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:133:19
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.verifyForgotPasswordCredentials (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:158:24)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-09 00:06:22 [31merror[39m: ReferenceError: err is not defined
+    at C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:216:21
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:152:16
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at exports.confirmAccountCreation (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:214:7)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:281:22
+    at param (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:354:14)
+    at param (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:410:3)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\index.js:47:12)
+2021-09-09 20:23:36 [31merror[39m: redis client disconnected
+2021-09-09 20:54:30 [31merror[39m: redis client disconnected
+2021-09-09 20:58:57 [31merror[39m: AbortError: GET can't be processed. The connection is already closed.
+    at handle_offline_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:780:15)
+    at RedisClient.internal_send_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:814:9)
+    at RedisClient.get (C:\WorkDir\ideas\failure\backend\node_modules\redis\lib\commands.js:46:25)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at RedisClient.get (internal/util.js:296:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:57:4
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:223:12
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:102:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+2021-09-09 20:58:57 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:64:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-09 20:59:11 [31merror[39m: AbortError: GET can't be processed. The connection is already closed.
+    at handle_offline_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:780:15)
+    at RedisClient.internal_send_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:814:9)
+    at RedisClient.get (C:\WorkDir\ideas\failure\backend\node_modules\redis\lib\commands.js:46:25)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at RedisClient.get (internal/util.js:296:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:57:4
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:223:12
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.refreshTokenController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:102:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+2021-09-09 20:59:11 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:64:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-09 20:59:13 [31merror[39m: AbortError: SET can't be processed. The connection is already closed.
+    at handle_offline_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:780:15)
+    at RedisClient.internal_send_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:814:9)
+    at RedisClient.set (C:\WorkDir\ideas\failure\backend\node_modules\redis\lib\commands.js:46:25)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at RedisClient.set (internal/util.js:296:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:39:4
+    at C:\WorkDir\ideas\failure\backend\node_modules\lodash.once\index.js:71:21
+    at SignStream.<anonymous> (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\sign.js:201:9)
+    at Object.onceWrapper (events.js:421:26)
+    at SignStream.emit (events.js:314:20)
+    at SignStream.sign (C:\WorkDir\ideas\failure\backend\node_modules\jws\lib\sign-stream.js:64:10)
+    at SignStream.<anonymous> (C:\WorkDir\ideas\failure\backend\node_modules\jws\lib\sign-stream.js:46:12)
+    at Object.onceWrapper (events.js:420:28)
+    at DataStream.emit (events.js:314:20)
+    at DataStream.<anonymous> (C:\WorkDir\ideas\failure\backend\node_modules\jws\lib\data-stream.js:32:12)
+2021-09-09 20:59:13 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:45:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-09 21:02:08 [31merror[39m: redis client error
+2021-09-09 21:02:08 [31merror[39m: redis client disconnected
+2021-09-09 21:02:08 [31merror[39m: redis client error
+2021-09-09 21:02:09 [31merror[39m: redis client error
+2021-09-09 21:02:09 [31merror[39m: redis client error
+2021-09-09 21:02:10 [31merror[39m: redis client error
+2021-09-09 21:02:12 [31merror[39m: redis client error
+2021-09-09 21:04:40 [31merror[39m: redis client disconnected
+2021-09-09 21:05:28 [31merror[39m: AbortError: GET can't be processed. The connection is already closed.
+    at handle_offline_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:780:15)
+    at RedisClient.internal_send_command (C:\WorkDir\ideas\failure\backend\node_modules\redis\index.js:814:9)
+    at RedisClient.get (C:\WorkDir\ideas\failure\backend\node_modules\redis\lib\commands.js:46:25)
+    at internal/util.js:297:30
+    at new Promise (<anonymous>)
+    at RedisClient.get (internal/util.js:296:12)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:57:4
+    at C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:223:12
+    at getSecret (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (C:\WorkDir\ideas\failure\backend\node_modules\jsonwebtoken\verify.js:94:10)
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:54:7
+    at new Promise (<anonymous>)
+    at exports.verifyRefreshToken (C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:53:9)
+    at exports.logoutController (C:\WorkDir\ideas\failure\backend\App\controllers\Auth\authController.js:124:24)
+    at Layer.handle [as handle_request] (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\WorkDir\ideas\failure\backend\node_modules\express\lib\router\route.js:137:13)
+2021-09-09 21:05:28 [31merror[39m: InternalServerError: Internal Server Error
+    at C:\WorkDir\ideas\failure\backend\App\helpers\jwtHelper.js:64:25
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+2021-09-10 01:47:17 [31merror[39m: redis client disconnected
