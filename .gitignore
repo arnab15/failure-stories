@@ -3,3 +3,8 @@ node_modules
 log
 log/error.log
 test.js
+docker-compose.yml
+backup
+Dockerfile
+nginx/*
+.Dockerignore

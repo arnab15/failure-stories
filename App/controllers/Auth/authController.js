@@ -16,7 +16,7 @@ let cookieConfig = {
 	maxAge: 1000 * 60 * 15, // would expire after 15 minutes
 	httpOnly: true,
 	secure: process.env.NODE_ENV !== "production" ? false : true,
-	sameSite: "none",
+	sameSite: process.env.NODE_ENV !== "production" ? "lax" : "none",
 };
 
 exports.signUpController = async (req, res, next) => {

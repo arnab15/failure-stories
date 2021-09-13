@@ -41,6 +41,12 @@ const userSchema = new Schema(
 			type: String,
 			trim: true,
 		},
+		bookmarkedStories: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "Story",
+			},
+		],
 	},
 	{
 		timestamps: true,

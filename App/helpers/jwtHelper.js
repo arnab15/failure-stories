@@ -7,7 +7,7 @@ exports.signAccessToken = ({ payload = {}, userId }) => {
 	return new Promise((resolve, reject) => {
 		const secret = process.env.ACCESS_TOKEN_SECRET;
 		const options = {
-			expiresIn: "30sec",
+			expiresIn: "45min",
 			issuer: "arnab.sahoo",
 			audience: userId,
 		};

@@ -134,10 +134,45 @@ exports.deleteStory = async (req, res, next) => {
 		const user = await User.findById(userId);
 		if (!user) return customHttpError(res, next, 404, "User Not found");
 		await Story.findByIdAndDelete(storyId);
-		return res.status(202).send()
+		return res.status(202).send();
 	} catch (error) {
 		logger.error(error);
 		res.status(500);
 		next(httpError.InternalServerError());
+	}
+};
+
+exports.bookmarkStory = async (req, res, next) => {
+	const { storyId } = req.body;
+	try {
+		await validateObjectId("storyId", { storyId });
+	} catch (error) {
+		return customHttpError(res, next, 400, "Require a valid objectid");
+	}
+	try {
+		const { aud } = req.user;
+		const user = await User.findById(aud);
+		if (!user) return customHttpError(res, next, 404, "User not found");
+		const story = await Story.findById(storyId);
+		if (!story) return customHttpError(res, next, 404, "Story not found");
+		if (user.bookmarkedStories.length === 0 && story.bookmarkedBy.length === 0) {
+			user.bookmarkedStories.push(story._id);
+			story.bookmarkedBy.push(user._id);
+			await story.save();
+			await user.save();
+			return res.status(202).send();
+		}
+		const isStoryAlreadyBookmarked = story.bookmarkedBy.includes(user._id);
+		if (!isStoryAlreadyBookmarked) {
+			user.bookmarkedStories.push(story._id);
+			story.bookmarkedBy.push(user._id);
+			await story.save();
+			await user.save();
+			return res.status(202).send();
+		}
+		return res.status(304).send();
+	} catch (error) {
+		logger.error(error);
+		customHttpError(res, next, 500, "Internal server error");
 	}
 };
