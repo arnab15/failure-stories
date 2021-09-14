@@ -1,5 +1,6 @@
 const { customHttpError } = require("../../helpers/customError");
 const { logger } = require("../../logger");
+const { Story } = require("../../models/story");
 const { User } = require("../../models/user");
 
 exports.getUserProfile = async (req, res, next) => {
@@ -67,6 +68,22 @@ exports.updateUsername = async (req, res, next) => {
 		user.username = username;
 		await user.save();
 		return res.status(204).send();
+	} catch (error) {
+		logger.error(error);
+		return customHttpError(res, next, 500, "Internal Server Error");
+	}
+};
+
+exports.getBookmarkedStoriesOfUser = async (req, res, next) => {
+	try {
+		const { aud } = req.user;
+		console.log("userid", req.user);
+		const user = await User.findById(aud).select("bookmarkedStories");
+		if (!user) return customHttpError(res, next, 404, "User not exists");
+		const stories = await Story.find({ _id: { $in: user.bookmarkedStories } })
+			.populate("author", "name")
+			.select("-bookmarkedBy");
+		return res.send(stories);
 	} catch (error) {
 		logger.error(error);
 		return customHttpError(res, next, 500, "Internal Server Error");
