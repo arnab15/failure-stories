@@ -8,6 +8,10 @@ const storySchema = new Schema(
 			required: true,
 			trim: true,
 		},
+		learning: {
+			type: String,
+			trim: true,
+		},
 		author: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "User",
@@ -23,6 +27,16 @@ const storySchema = new Schema(
 				ref: "User",
 			},
 		],
+		tags: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "Tag",
+			},
+		],
+		postAnonomusly: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	{
 		timestamps: true,

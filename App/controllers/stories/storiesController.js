@@ -20,7 +20,9 @@ const { validateObjectId } = require("../../validators/validateObjectId");
 
 exports.getAllStories = async (req, res, next) => {
 	try {
-		const stories = await Story.find({ published: true }).populate("author", "-password -email");
+		const stories = await Story.find({ published: true })
+			.populate("author", "-password -email -googleId")
+			.populate("tags");
 		return res.send(stories);
 	} catch (error) {
 		logger.error(error);
@@ -37,7 +39,7 @@ exports.getStoyById = async (req, res, next) => {
 	}
 	try {
 		const { storyId } = req.params;
-		const story = await Story.findById(storyId).populate("author", "-password -email");
+		const story = await Story.findById(storyId).populate("author", "-password -email").populate("tags");
 		if (!story) return customHttpError(res, next, 404, "No story Found");
 		return res.send(story);
 	} catch (error) {
@@ -70,7 +72,7 @@ exports.createStory = async (req, res, next) => {
 
 	res.send(req.body);
 };
-
+//Todo validation schema for req.body
 exports.updateStory = async (req, res, next) => {
 	try {
 		await validateObjectId("storyId", req.params);
@@ -82,17 +84,20 @@ exports.updateStory = async (req, res, next) => {
 		const userId = req.user.aud;
 		const user = await User.findById(userId);
 		if (!user) return customHttpError(res, next, 404, "User Not found");
-		const { story: incommingStory, published } = req.body;
+		const { story: incommingStory, published, learning, tags, postAnonomusly } = req.body;
 		console.log("req,body", req.body);
 
 		// if (!req.body.story || !req.body.published) return customHttpError(res, next, 400, "Story or published is required");
 		const story = await Story.findById(storyId);
 		if (!story) return customHttpError(res, next, 404, "Story Not found");
-		if (incommingStory) {
+		if (incommingStory || learning) {
 			story.story = JSON.stringify(incommingStory);
+			story.learning = learning ? JSON.stringify(learning) : null;
 		}
-		if (published) {
+		if (published && tags.length > 0) {
 			story.published = published;
+			story.tags = tags;
+			story.postAnonomusly = postAnonomusly;
 		}
 		await story.save();
 		return res.status(202).send();
