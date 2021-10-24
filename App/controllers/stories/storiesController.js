@@ -22,7 +22,8 @@ exports.getAllStories = async (req, res, next) => {
 	try {
 		const stories = await Story.find({ published: true })
 			.populate("author", "-password -email -googleId")
-			.populate("tags");
+			.populate("tags")
+			.sort({ updatedAt: -1 });
 		return res.send(stories);
 	} catch (error) {
 		logger.error(error);
