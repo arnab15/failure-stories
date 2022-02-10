@@ -1,0 +1,69 @@
+version: "3.8"
+
+services:
+    backend:
+        depends_on:
+            - db
+            - redis
+        build: .
+        image: your_failure_backend:1
+        ports:
+            - 5001
+        environment:
+            PORT: 5001
+            NODE_ENV: production
+            DB_URL: mongodb://db/failurestory
+            REDIS_HOST: redis
+            REDIS_PORT: 6379
+            ACCESS_TOKEN_SECRET: 123456
+            REFRESH_TOKEN_SECRET: refsec
+            FORGOT_PASSWORD_TOKEN_SECRET: fpassword
+            CONFIRM_ACCOUNT_TOKEN_SECRET: confirm
+            FRONTEND_URL: http://localhost:3000
+            SENDGRID_API_KEY: "${SENDGRID_API_KEY}"
+            GOOGLE_CLIENT_ID: "${GOOGLE_CLIENT_ID}"
+            GOOGLE_CLIENT_SECRETE: "${GOOGLE_CLIENT_SECRETE}"
+        restart: unless-stopped
+    db:
+        image: mongo:4.0-xenial
+        # ports:
+        #   - 27017:27017
+        volumes:
+            - ./backup:/backup
+            - failurestory_mongo:/data/db
+        restart: unless-stopped
+
+    redis:
+        image: redis:alpine3.14
+        restart: unless-stopped
+
+    nginx:
+        depends_on:
+            - backend
+        restart: always
+        build:
+            dockerfile: Dockerfile
+            context: ./nginx
+        ports:
+            - 80:80
+            - 443:443
+    # caddy:
+    #     image: caddy/caddy:2.2.1-alpine
+    #     container_name: caddy-service
+    #     restart: unless-stopped
+    #     depends_on:
+    #         - backend
+    #     ports:
+    #         - "80:80"
+    #         - "443:443"
+    #     volumes:
+    #         - $PWD/caddy/Caddyfile:/etc/caddy/Caddyfile
+    #         - $PWD/site:/srv
+    #         - caddy_data:/data
+    #         - caddy_config:/config
+
+volumes:
+    # caddy_data:
+    #caddy_config
+    failurestory_mongo:
+        driver: local
