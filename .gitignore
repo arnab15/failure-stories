@@ -8,3 +8,4 @@ backup
 Dockerfile
 nginx/*
 .Dockerignore
+caddy/*

@@ -55,23 +55,25 @@ exports.createStory = async (req, res, next) => {
 		const userId = req.user.aud;
 		const user = await User.findById(userId);
 		if (!user) return customHttpError(res, next, 404, "User Not found");
-		const { story } = req.body;
-		if (!story) return customHttpError(res, next, 400, "Story is required");
-		const newStory = new Story({
-			story: JSON.stringify(story),
-			author: user._id,
-		});
-		const savedStory = await newStory.save();
-		console.log(savedStory);
-		return res.send(savedStory);
+		const { story, learning } = req.body;
+		console.log({ story, learning });
+
+		if (story || learning) {
+			const newStory = new Story({
+				story: JSON.stringify(story),
+				author: user._id,
+				learning: learning ? JSON.stringify(learning) : "",
+			});
+			const savedStory = await newStory.save();
+			console.log(savedStory);
+			return res.send(savedStory);
+		}
+		return customHttpError(res, next, 400, "Story or learning is required");
 	} catch (error) {
 		logger.error(error);
 		res.status(500);
 		next(httpError.InternalServerError());
 	}
-	console.log("user", req.user);
-
-	res.send(req.body);
 };
 //Todo validation schema for req.body
 exports.updateStory = async (req, res, next) => {

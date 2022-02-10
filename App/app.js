@@ -24,6 +24,7 @@ exports.nodeApp = () => {
 			origin: [
 				"http://localhost:3000",
 				"http://localhost:3001",
+				"http://192.168.100:3001",
 				"https://failure-stories-frontend-sand.vercel.app",
 			],
 			credentials: true,
@@ -32,6 +33,7 @@ exports.nodeApp = () => {
 	app.use(express.json());
 	app.use(cookieParser());
 	app.use("/api/v1", apiRouter);
+
 	app.use((req, res, next) => {
 		res.send({
 			error: {

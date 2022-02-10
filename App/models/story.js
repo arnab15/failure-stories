@@ -5,7 +5,6 @@ const storySchema = new Schema(
 	{
 		story: {
 			type: String,
-			required: true,
 			trim: true,
 		},
 		learning: {
