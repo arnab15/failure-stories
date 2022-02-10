@@ -33,7 +33,12 @@ exports.nodeApp = () => {
 	app.use(express.json());
 	app.use(cookieParser());
 	app.use("/api/v1", apiRouter);
-
+	app.get("/", (req, res, next) => {
+		return res.send({
+			message: "Wecome to failure strories api",
+			status: "running",
+		});
+	});
 	app.use((req, res, next) => {
 		res.send({
 			error: {
